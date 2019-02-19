@@ -1290,7 +1290,13 @@ def generated_maven_jars():
                 name = "log4j",
                 jar_sha256 = "1d31696445697720527091754369082a6651bd49781b6005deb94e56753406f9",
                 licenses = ["notice"],
-                jar_urls = ["http://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar"],        )
+                jar_urls = ["http://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar"],)
+    if "onlab_misc" not in native.existing_rules():
+                        java_import_external(
+                            name = "onlab_misc",
+                            jar_sha256 = "d9271057e609038404adc5a26af1338fa59e5e70ef147e47261da42639ff4a06",
+                            licenses = ["notice"],
+                            jar_urls = ["http://repo1.maven.org/maven2/org/onosproject/onlab-misc/1.14.1/onlab-misc-1.14.1.jar"], )
 artifact_map = {}
 artifact_map["@aopalliance_repackaged//:aopalliance_repackaged"] = "mvn:org.glassfish.hk2.external:aopalliance-repackaged:jar:2.5.0-b42"
 artifact_map["@amqp_client//:amqp_client"] = "mvn:com.rabbitmq:amqp-client:jar:3.6.1"
@@ -1486,3 +1492,4 @@ artifact_map["@gnu_idn//:gnu_idn"] = "mvn:org.gnu.inet:libidn:jar:NON-OSGI:1.15"
 artifact_map["@sigar//:sigar"] = "mvn:org.knowhowlab.osgi:sigar:jar:1.6.5_01"
 artifact_map["@slf4j_simple//:slf4j_simple"] = "mvn:org.slf4j:slf4j-simple:jar:1.7.1"
 artifact_map["@log4j//:log4j"] = "mvn:log4j:log4j:jar:1.2.17"
+artifact_map["@onlab_misc//:onlab_misc"] = "mvn:org.onosproject:onlab-misc:jar:1.14.1"
