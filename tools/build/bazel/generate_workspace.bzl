@@ -191,7 +191,7 @@ def generated_maven_jars():
             name = "classgraph",
             jar_sha256 = "92a75236a6a30993895916b7eea4011c54d3182c9fa6734e8c23b30cc9500023",
             licenses = ["notice"],
-            jar_urls = ["http://repo1.maven.org/maven2/io/github/classgraph/classgraph/4.2.3/classgraph-4.2.3.jar"],        )
+            jar_urls = ["https://repo1.maven.org/maven2/io/github/classgraph/classgraph/4.2.3/classgraph-4.2.3.jar"],        )
     if "commons_codec" not in native.existing_rules():
         java_import_external(
             name = "commons_codec",
